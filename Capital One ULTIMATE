@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- NECESARIO para que el diseño responda en móviles -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SecureBank Login</title>
   <style>
     body {
@@ -12,6 +14,7 @@
       align-items: center;
       height: 100vh;
     }
+
     .login-container {
       background-color: white;
       padding: 30px;
@@ -21,19 +24,23 @@
       max-width: 400px;
       text-align: center;
     }
+
     .logo {
       max-width: 100px;
       margin-bottom: 10px;
     }
+
     h2 {
       margin-bottom: 20px;
       color: #2d2d2d;
     }
+
     label {
       font-weight: bold;
       float: left;
       margin-top: 10px;
     }
+
     input[type="text"],
     input[type="password"] {
       width: 100%;
@@ -42,6 +49,7 @@
       border: 1px solid #ccc;
       border-radius: 6px;
     }
+
     button {
       width: 100%;
       padding: 12px;
@@ -52,13 +60,43 @@
       font-size: 16px;
       cursor: pointer;
     }
+
     button:hover {
       background-color: #003a8c;
     }
+
     .note {
       margin-top: 15px;
       font-size: 12px;
       color: #777;
+    }
+
+    /* 👇 Estilos para móviles */
+    @media (max-width: 480px) {
+      .login-container {
+        padding: 40px 20px;
+        max-width: 95%;
+        font-size: 18px;
+      }
+
+      input[type="text"],
+      input[type="password"],
+      button {
+        padding: 16px;
+        font-size: 18px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      label {
+        font-size: 16px;
+      }
+
+      .logo {
+        max-width: 120px;
+      }
     }
   </style>
 </head>
@@ -87,25 +125,3 @@
   </div>
 </body>
 </html>
-@media (max-width: 480px) {
-  .login-container {
-    padding: 40px 20px;
-    max-width: 95%;
-    font-size: 18px;
-  }
-
-  input[type="text"],
-  input[type="password"],
-  button {
-    padding: 16px;
-    font-size: 18px;
-  }
-
-  h2 {
-    font-size: 24px;
-  }
-
-  label {
-    font-size: 16px;
-  }
-}
