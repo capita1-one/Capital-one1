@@ -87,3 +87,25 @@
   </div>
 </body>
 </html>
+@media (max-width: 480px) {
+  .login-container {
+    padding: 40px 20px;
+    max-width: 95%;
+    font-size: 18px;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  button {
+    padding: 16px;
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  label {
+    font-size: 16px;
+  }
+}
