@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <!-- Clave para que el diseño funcione bien en móviles -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SecureBank Login</title>
   <style>
     body {
@@ -13,9 +11,7 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      margin: 0;
     }
-
     .login-container {
       background-color: white;
       padding: 30px;
@@ -25,23 +21,19 @@
       max-width: 400px;
       text-align: center;
     }
-
     .logo {
       max-width: 100px;
       margin-bottom: 10px;
     }
-
     h2 {
       margin-bottom: 20px;
       color: #2d2d2d;
     }
-
     label {
       font-weight: bold;
       float: left;
       margin-top: 10px;
     }
-
     input[type="text"],
     input[type="password"] {
       width: 100%;
@@ -49,9 +41,7 @@
       margin: 10px 0 20px 0;
       border: 1px solid #ccc;
       border-radius: 6px;
-      font-size: 16px;
     }
-
     button {
       width: 100%;
       padding: 12px;
@@ -62,43 +52,13 @@
       font-size: 16px;
       cursor: pointer;
     }
-
     button:hover {
       background-color: #003a8c;
     }
-
     .note {
       margin-top: 15px;
       font-size: 12px;
       color: #777;
-    }
-
-    /* 🌐 Estilos adaptados para móviles */
-    @media (max-width: 600px) {
-      .login-container {
-        padding: 40px 20px;
-        font-size: 18px;
-        max-width: 95%;
-      }
-
-      input[type="text"],
-      input[type="password"],
-      button {
-        padding: 16px;
-        font-size: 18px;
-      }
-
-      h2 {
-        font-size: 24px;
-      }
-
-      label {
-        font-size: 16px;
-      }
-
-      .logo {
-        max-width: 120px;
-      }
     }
   </style>
 </head>
